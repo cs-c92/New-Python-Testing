@@ -6,7 +6,7 @@ def song_and_artist(title, artist):
 
 # using .format with keywords
 def song_description(title, date_released, album_name, artist, label):
-    song_des = '''The song {title} was released as a part of the album {album_name}. By the band {artist} in the year {date_released}. It was produced by the record label {label}.'''.format(title = title, date_released = date_released, album_name = album_name, artist = artist, label = label)
+    song_des = '''The song {title} was released as a part of the album {album_name}. By the band {artist} in the year {date_released}. It was produced by the record label {label}:'''.format(title = title, date_released = date_released, album_name = album_name, artist = artist, label = label)
     return song_des
 artist = "Rush"
 title = "Limelight"
@@ -67,3 +67,37 @@ For those who think and feel,
 limelight_placement = limelight_first_verse.find("limelight")
 #print('limelight'.find('m'))
 
+# .lower, lets make a lower case verse.
+limelight_verse_three = '''Living in a fish eye lens, caught in the camera eye,
+I have no heart to lie,
+I can't pretend a stranger is a long-awaited friend'''
+verse_three_fixed = limelight_verse_three.lower()
+print(verse_three_fixed)
+
+# .upper, lets make an upper case verse.
+limelight_bridge = '''All the world's indeed a stage and we are merely players!!
+Performers and portrayers!
+Each anothers audience outside the gilded cage!'''
+limelight_bridge_fixed = limelight_bridge.upper()
+print(limelight_bridge_fixed)
+
+# .split, lets chop the penultimate chorus up!
+penultimate_chorus = '''Living in the limelight, the universal dream
+For those who wish to see
+Those who wish to be
+Must put aside the alienation
+Get on with the fascination
+The real relation, the underlying theme'''
+penultimate_chorus_words = penultimate_chorus.split()
+print(penultimate_chorus_words)
+
+# .title, lets capitalise every word in this last chorus
+final_chorus = '''Living in the limelight, the universal dream
+For those who wish to see
+Those who wish to be
+Must put aside the alienation
+Get on with the fascination
+The real relation, the underlying theme
+The real relation, the underlying theme!!!'''
+final_chorus_titled = final_chorus.title()
+print(final_chorus_titled)
