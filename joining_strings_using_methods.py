@@ -2,7 +2,20 @@
 def song_and_artist(title, artist):
     song_desc = "The song \"{}\" is written by {}.".format(title, artist)
     return song_desc
-print(song_and_artist("Limelight", "Rush"))
+#print(song_and_artist("Limelight", "Rush"))
+
+# using .format with keywords
+def song_description(title, date_released, album_name, artist, label):
+    song_des = '''The song {title} was released as a part of the album {album_name}. By the band {artist} in the year {date_released}. It was produced by the record label {label}.'''.format(title = title, date_released = date_released, album_name = album_name, artist = artist, label = label)
+    return song_des
+artist = "Rush"
+title = "Limelight"
+album_name = "Moving Pictures"
+date_released = "1981"
+label = "Mercury"
+
+limelight_description = song_description(title, date_released, album_name, artist, label)
+print(limelight_description)
 
 # Printing the lyrics as a list
 limelight_first_verse = ['Living on a lighted stage approaches the unreal', 
