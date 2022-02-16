@@ -1,3 +1,9 @@
+# using .format to return the artist and song
+def song_and_artist(title, artist):
+    song_desc = "The song \"{}\" is written by {}.".format(title, artist)
+    return song_desc
+print(song_and_artist("Limelight", "Rush"))
+
 # Printing the lyrics as a list
 limelight_first_verse = ['Living on a lighted stage approaches the unreal', 
 'For those who think and feel', 
